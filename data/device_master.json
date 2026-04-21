@@ -1,0 +1,74 @@
+[
+  {
+    "device_name": "아이폰17",
+    "aliases": ["iPhone17", "iphone17", "아폰17"],
+    "release_price": 1250000,
+    "official_subsidy_by_carrier": {
+      "SKT": 240000,
+      "KT": 240000,
+      "LGU": 240000
+    },
+    "release_date": "2025-09-01",
+    "is_active": true
+  },
+  {
+    "device_name": "아이폰17프로",
+    "aliases": ["iPhone17Pro", "17pro", "아폰17프로"],
+    "release_price": 1550000,
+    "official_subsidy_by_carrier": {
+      "SKT": 270000,
+      "KT": 270000,
+      "LGU": 270000
+    },
+    "release_date": "2025-09-01",
+    "is_active": true
+  },
+  {
+    "device_name": "아이폰17프로맥스",
+    "aliases": ["iPhone17ProMax", "17promax", "아폰17프로맥스"],
+    "release_price": 1750000,
+    "official_subsidy_by_carrier": {
+      "SKT": 290000,
+      "KT": 290000,
+      "LGU": 290000
+    },
+    "release_date": "2025-09-01",
+    "is_active": true
+  },
+  {
+    "device_name": "갤럭시S26",
+    "aliases": ["GalaxyS26", "S26", "갤s26"],
+    "release_price": 1150000,
+    "official_subsidy_by_carrier": {
+      "SKT": 210000,
+      "KT": 210000,
+      "LGU": 210000
+    },
+    "release_date": "2026-01-15",
+    "is_active": true
+  },
+  {
+    "device_name": "갤럭시S26플러스",
+    "aliases": ["GalaxyS26Plus", "S26+", "갤s26+"],
+    "release_price": 1350000,
+    "official_subsidy_by_carrier": {
+      "SKT": 230000,
+      "KT": 230000,
+      "LGU": 230000
+    },
+    "release_date": "2026-01-15",
+    "is_active": true
+  },
+  {
+    "device_name": "갤럭시S26울트라",
+    "aliases": ["GalaxyS26Ultra", "S26U", "갤s26울트라"],
+    "release_price": 1650000,
+    "official_subsidy_by_carrier": {
+      "SKT": 270000,
+      "KT": 270000,
+      "LGU": 270000
+    },
+    "release_date": "2026-01-15",
+    "is_active": true
+  }
+]
