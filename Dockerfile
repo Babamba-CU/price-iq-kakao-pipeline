@@ -3,12 +3,12 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # 의존성 설치
-COPY backend/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY backend/requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # 코드 복사
-COPY backend/ ./backend/
-COPY CLAUDE.md .
+COPY backend/ /app/backend/
+COPY CLAUDE.md /app/
 
 WORKDIR /app/backend
 
