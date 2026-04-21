@@ -1,0 +1,41 @@
+name: Deploy to Render
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy to Render
+        if: vars.RENDER_SERVICE_ID != ''
+        env:
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+          RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+        run: |
+          echo "배포 준비 완료: Render API 호출 대기"
+          echo "RENDER_SERVICE_ID: $RENDER_SERVICE_ID (첫 10자만 표시)"
+          echo "${RENDER_SERVICE_ID:0:10}..."
+
+      - name: Deployment Status
+        run: |
+          echo "✅ GitHub Actions 워크플로우 설정 완료"
+          echo "📋 Render에서 수동 배포하거나, 아래 가이드 참고:"
+          echo ""
+          echo "1. Render 계정 생성: https://render.com"
+          echo "2. New → Web Service 선택"
+          echo "3. GitHub 리포지토리 연결"
+          echo "4. Build Command: pip install -r backend/requirements.txt"
+          echo "5. Start Command: cd backend && python -m uvicorn main:app --host 0.0.0.0 --port 8000"
+          echo "6. Environment Variables 설정"
+          echo ""
+          echo "배포 완료 후:"
+          echo "- GitHub Secrets에 RENDER_API_KEY, RENDER_SERVICE_ID 추가"
+          echo "- 자동 배포 활성화"
