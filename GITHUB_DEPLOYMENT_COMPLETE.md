@@ -55,11 +55,13 @@ GitHub 로그인 → 승인
 Render → Environment 탭:
 
 ```
-ANTHROPIC_API_KEY=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
-DATABASE_URL=postgresql://priceiq:priceiq@localhost:5432/priceiq
-JWT_SECRET_KEY=5cfb96863ae75ebf5e216356c724a830712443d48e57028cf81174f857d830c0
-CORS_ORIGINS=http://localhost:5173,https://price-iq.onrender.com
+ANTHROPIC_API_KEY=sk-... (Anthropic 콘솔에서 발급)
+DATABASE_URL=postgresql://... (데이터베이스 주소)
+JWT_SECRET_KEY=... (임의의 256bit 문자열)
+CORS_ORIGINS=http://localhost:5173,https://your-domain.onrender.com
 ```
+
+⚠️ **보안:** API 키는 GitHub에 푸시하지 마세요. Environment Variables로만 관리하세요.
 
 #### 4️⃣ Deploy!
 
