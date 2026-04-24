@@ -10,8 +10,11 @@ from routers import auth, users, ingest, dashboard, devices, aggregation, agent,
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+    try:
+        async with engine.begin() as conn:
+            await conn.run_sync(Base.metadata.create_all)
+    except Exception as e:
+        print(f"Warning: Database initialization failed: {e}")
     yield
 
 
