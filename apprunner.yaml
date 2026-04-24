@@ -4,8 +4,8 @@ build:
   commands:
     build:
       - pip install -r backend/requirements.txt
-env:
-  - name: PYTHONUNBUFFERED
-    value: "1"
 run:
   command: cd backend && PYTHONPATH=/app/backend python -m uvicorn main:app --host 0.0.0.0 --port 8000
+  env:
+    - name: PYTHONUNBUFFERED
+      value: "1"
